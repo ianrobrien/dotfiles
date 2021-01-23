@@ -1,0 +1,20 @@
+- defaults:
+    link:
+        relink: true
+
+- link:
+    ~/.gitconfig:
+        path: dotfiles/gitconfig
+    ~/.hushlogin:
+        path: dotfiles/hushlogin
+    ~/.npmrc:
+        path: dotfiles/npmrc
+    ~/.vimrc:
+        path: dotfiles/vimrc
+    ~/.zshrc:
+        path: dotfiles/zshrc
+    ~/.zsh/:
+        create: true
+        glob: true
+        path: zsh/*
+

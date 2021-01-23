@@ -1,0 +1,46 @@
+[alias]
+    bd = branch -D
+    cam = commit -am
+    co = checkout
+    cob = checkout -b
+    discard = checkout --
+    fpo = fetch --prune origin
+    lb = branch -l
+    rhh = reset --hard HEAD
+    s = status
+    squish = rebase -i HEAD~2
+    unstage = reset
+[color]
+    branch = auto
+    diff = auto
+    interactive = true
+    status = auto
+[color "diff"]
+    new = green
+    old = red
+[commit]
+	gpgSign = true
+[core]
+#    autocrlf = input
+    whitespace = cr-at-eol
+#    pager = "diff-so-fancy" | less -RFX
+#	autocrlf = true
+#	 pager = cat
+#    editor = '/usr/local/bin/code' -n -w
+[help]
+    autocorrect = 15
+[log]
+    decorate = short
+    showSignature = true
+[merge]
+    conflictStyle = diff3
+[pager]
+	branch = false
+[pull]
+	rebase = false
+[tag]
+	gpgSign = true
+[user]
+    name = "Ian Robert O'Brien"
+    email = ian.r.obrien@protonmail.com
+    signingkey = FECB1A861878CD3B
