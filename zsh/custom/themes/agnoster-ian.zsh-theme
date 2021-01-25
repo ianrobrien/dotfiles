@@ -92,14 +92,23 @@ prompt_end() {
 prompt_context() {
   user="%n"
   host="%m"
+
+  user_string=""
+  host_string=""
   
-  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    host="%{%F{red}%}${host}%{%F{default}%}"
-  else    
-    host="%{%F{green}%}${host}%{%F{default}%}"
+  if [[ "$USER" != "$DEFAULT_USER" ]]; then
+    user_string="%{%F{red}%}${user}%{%F{default}%}"
+  else
+    user_string="%{%F{green}%}${user}%{%F{default}%}"
   fi
   
-  context="${user}@${host}"
+  if [[ -n "$SSH_CLIENT" ]]; then
+    host_string="%{%F{red}%}${host}%{%F{default}%}"
+  else    
+    host_string="%{%F{green}%}${host}%{%F{default}%}"
+  fi
+  
+  context="${user_string}@${host_string}"
   context_string="%{%F{default}%}${context}%{%F{default}%}"
   prompt_segment black default "[${context_string}]"
 }
