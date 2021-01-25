@@ -90,11 +90,18 @@ prompt_end() {
 
 # Context: user@hostname (who am I and where am I)
 prompt_context() {
+  user="%n"
+  host="%m"
+  
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)%n@%m"
-  else
-    prompt_segment black default "%(!.%{%F{yellow}%}.)%n"
+    host="%{%F{red}%}${host}%{%F{default}%}"
+  else    
+    host="%{%F{green}%}${host}%{%F{default}%}"
   fi
+  
+  context="${user}@${host}"
+  context_string="%{%F{default}%}${context}%{%F{default}%}"
+  prompt_segment black default "[${context_string}]"
 }
 
 # Git: branch/detached head, dirty status
@@ -191,7 +198,7 @@ build_prompt() {
   #prompt_prelude
   prompt_time
   #prompt_status
-  #prompt_context
+  prompt_context
   prompt_dir
   prompt_git
   prompt_end
