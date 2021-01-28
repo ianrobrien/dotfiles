@@ -127,6 +127,8 @@ gpgconf --launch gpg-agent
 # don't throw errors when file globs don't match anything
 setopt NULL_GLOB
 
+./.raspberrypi-motd.sh
+
 weather-prompt
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/bit bit

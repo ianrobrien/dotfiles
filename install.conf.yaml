@@ -9,6 +9,8 @@
         path: dotfiles/hushlogin
     ~/.npmrc:
         path: dotfiles/npmrc
+    ~/.raspberrypi-motd.sh:
+        path: dotfiles/raspberrypi-motd.sh
     ~/.vimrc:
         path: dotfiles/vimrc
     ~/.zshrc:
