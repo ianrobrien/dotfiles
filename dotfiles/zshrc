@@ -127,7 +127,9 @@ gpgconf --launch gpg-agent
 # don't throw errors when file globs don't match anything
 setopt NULL_GLOB
 
-./.raspberrypi-motd.sh
+if [[ $(hostname -s) = raspberrypi ]]; then
+    ./.raspberrypi-motd.sh
+fi
 
 weather-prompt
 autoload -U +X bashcompinit && bashcompinit

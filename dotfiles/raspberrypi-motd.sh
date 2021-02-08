@@ -1,11 +1,6 @@
 #!/bin/bash
-echo "$(tput setaf 2)
-  ____  _       _           _
- |  _ \(_)     | |__   ___ | | ___
- | |_) | |_____| '_ \ / _ \| |/ _ \\
- |  __/| |_____| | | | (_) | |  __/
- |_|   |_|     |_| |_|\___/|_|\___|                                   
-$(tput sgr0)"
+hs=`hostname`
+figlet "$hs" | lolcat -p 1 -S 50
 
 let upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
 let secs=$((${upSeconds}%60))
