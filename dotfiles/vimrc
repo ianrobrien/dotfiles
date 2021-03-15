@@ -28,8 +28,8 @@ set expandtab
 set nojoinspaces
 
 " Numbers
-set number
-set numberwidth=5
+"set number
+"set numberwidth=5
 
 " Switch between the last two files
 nnoremap <Leader><Leader> <C-^>
