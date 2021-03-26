@@ -96,7 +96,7 @@ prompt_context() {
   user_string=""
   host_string=""
   
-  if [[ "$USER" != "$DEFAULT_USER" ]]; then
+  if [[ "$USERNAME" != "$DEFAULT_USER" ]]; then
     user_string="%{%F{red}%}${user}%{%F{default}%}"
   else
     user_string="%{%F{green}%}${user}%{%F{default}%}"
@@ -126,7 +126,7 @@ prompt_git() {
   }
   local ref dirty mode repo_path
 
-  if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
+  if [[ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" = "true" ]]; then
     repo_path=$(git rev-parse --git-dir 2>/dev/null)
     dirty=$(parse_git_dirty)
     ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git rev-parse --short HEAD 2> /dev/null)"
@@ -151,7 +151,7 @@ prompt_git() {
     zstyle ':vcs_info:*' get-revision true
     zstyle ':vcs_info:*' check-for-changes true
     zstyle ':vcs_info:*' stagedstr '✚'
-    zstyle ':vcs_info:*' unstagedstr '●'
+    zstyle ':vcs_info:*' unstagedstr '±'
     zstyle ':vcs_info:*' formats ' %u%c'
     zstyle ':vcs_info:*' actionformats ' %u%c'
     vcs_info

@@ -26,7 +26,7 @@
 #    pager = "diff-so-fancy" | less -RFX
 #	autocrlf = true
 #	 pager = cat
-#    editor = '/usr/local/bin/code' -n -w
+    editor = vim
 [help]
     autocorrect = 15
 [log]
