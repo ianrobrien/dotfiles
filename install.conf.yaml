@@ -12,12 +12,12 @@
     ~/.npmrc:
         path: dotfiles/npmrc
     ~/.raspberrypi-motd.sh:
-        if: '[ `uname -m` = armv7l ]'
+        if: '[[ $(uname -m) == armv7l ]]'
         path: dotfiles/raspberrypi-motd.sh
     ~/.vimrc:
         path: dotfiles/vimrc
     ~/Library/ApplicationSupport/Code/User/settings.json:
-        if: '[ -d ~/Library/ApplicationSupport/Code/User/ ]'
+        if: '[[ -d ~/Library/ApplicationSupport/Code/User/ ]]'
         path: vscode/settings.json
     ~/.zshrc:
         path: dotfiles/zshrc

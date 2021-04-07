@@ -122,11 +122,12 @@ gpgconf --launch gpg-agent
 # don't throw errors when file globs don't match anything
 setopt NULL_GLOB
 
-if [[ $(hostname -s) = raspberrypi ]]; then
-    ./.raspberrypi-motd.sh
+if [[ $(hostname -s) == raspberrypi ]]; then
+    ~/.raspberrypi-motd.sh
 fi
 
-if [[ $(whereis brew) -eq 0 ]]; then
+if [[ $(whereis brew) == 0 ]]; then
+    echo "hi"
     # BREW AUTOCOMPLETE
     if type brew &>/dev/null; then
       FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
