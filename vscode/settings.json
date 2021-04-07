@@ -1,0 +1,55 @@
+{
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "One Dark Pro",
+    "editor.fontFamily": "'FiraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 15,
+    "workbench.startupEditor": "newUntitledFile",
+    "vsicons.dontShowNewVersionMessage": true,
+    "window.nativeTabs": true,
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingOvertype": "never",
+    "editor.autoClosingQuotes": "never",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "files.exclude": {
+        "**/.git": false
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "maven.executable.path": "/usr/local/bin/mvn",
+    "java.semanticHighlighting.enabled": true,
+    "java.configuration.runtimes": [
+        {
+            "name": "AdoptOpenJDK 1.8.0_252",
+            "path": "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/bin/",
+            "sources": "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/src.zip",
+            "javadoc": "https://docs.oracle.com/javase/8/docs/api/"
+          },
+          {
+            "name": "AdoptOpenJDK 11.0.7",
+            "path": "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/bin/",
+            "sources" : "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/lib/src.zip",
+            "javadoc" : "https://docs.oracle.com/en/java/javase/11/docs/api",
+            "default":  true
+           }
+    ],
+    "python.languageServer": "Pylance",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.columnSelection": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "python.showStartPage": false,
+    "go.formatTool": "goimports",
+    "window.zoomLevel": 0,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "editor.renderControlCharacters": true
+}

@@ -115,11 +115,6 @@ DEFAULT_USER=`whoami`
 #export GEM_HOME=~/.gem
 #export PATH="$GEM_HOME/bin:$PATH"
 
-# BREW AUTOCOMPLETE
-#if type brew &>/dev/null; then
-#  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-#fi
-
 # GPG CONFIGURATION FOR SIGNING OF GIT COMMITS
 export GPG_TTY=$(tty)
 gpgconf --launch gpg-agent
@@ -129,6 +124,18 @@ setopt NULL_GLOB
 
 if [[ $(hostname -s) = raspberrypi ]]; then
     ./.raspberrypi-motd.sh
+fi
+
+if [[ $(whereis brew) -eq 0 ]]; then
+    # BREW AUTOCOMPLETE
+    if type brew &>/dev/null; then
+      FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+    fi
+
+    # Brew security options
+    export HOMEBREW_NO_ANALYTICS=1
+    export HOMEBREW_NO_INSECURE_REDIRECT=1
+    export HOMEBREW_CASK_OPTS=--require-sha
 fi
 
 weather-prompt

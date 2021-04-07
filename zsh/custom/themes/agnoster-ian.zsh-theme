@@ -216,5 +216,3 @@ build_prompt() {
 
 PROMPT='%{%f%b%k%}$(build_prompt)
 %{%f%b%k%}$(prompt_input) '
-
-

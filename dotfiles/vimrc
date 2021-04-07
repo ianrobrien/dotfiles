@@ -70,4 +70,3 @@ if filereadable($HOME . "/.vimrc.local")
 endif
 
 syntax on
-
