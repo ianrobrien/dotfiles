@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/ianrobrien/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -61,7 +61,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=/home/ianrobrien/.zsh/custom
+ZSH_CUSTOM=$HOME/.zsh/custom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -116,8 +116,8 @@ DEFAULT_USER=`whoami`
 #export PATH="$GEM_HOME/bin:$PATH"
 
 # GPG CONFIGURATION FOR SIGNING OF GIT COMMITS
-export GPG_TTY=$(tty)
-gpgconf --launch gpg-agent
+#export GPG_TTY=$(tty)
+#gpgconf --launch gpg-agent
 
 # don't throw errors when file globs don't match anything
 setopt NULL_GLOB
