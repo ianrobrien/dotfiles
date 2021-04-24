@@ -19,16 +19,18 @@
     new = green
     old = red
 [commit]
-	gpgSign = true
+	#gpgSign = true
 [core]
 #    autocrlf = input
     whitespace = cr-at-eol
-#    pager = "diff-so-fancy" | less -RFX
+    pager = diff-so-fancy | less --tabs=4 -RFX
 #	autocrlf = true
-#	 pager = cat
-    editor = vim
+#	pager = cat
+    editor = vim	
 [help]
     autocorrect = 15
+[interactive]
+	diffFilter = diff-so-fancy --patch
 [log]
     decorate = short
     showSignature = true
