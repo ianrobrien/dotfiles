@@ -16,8 +16,9 @@
         path: dotfiles/raspberrypi-motd.sh
     ~/.vimrc:
         path: dotfiles/vimrc
-    ~/Library/ApplicationSupport/Code/User/settings.json:
-        if: '[[ -d ~/Library/ApplicationSupport/Code/User/ ]]'
+    "$HOME/Library/Application Support/Code/User/settings.json":
+        if: '[[ -d "$HOME/Library/Application Support/Code/User/" ]]'
+        force: true
         path: vscode/settings.json
     ~/.zshrc:
         path: dotfiles/zshrc
