@@ -15,17 +15,28 @@
     diff = auto
     interactive = true
     status = auto
+	ui = true
 [color "diff"]
-    new = green
-    old = red
+	new = green bold
+	old = red bold
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	whitespace = red reverse
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
 [commit]
-	#gpgSign = true
+    # gpgSign = true
 [core]
-#    autocrlf = input
+    # autocrlf = input
+    # autocrlf = true
     whitespace = cr-at-eol
     pager = diff-so-fancy | less --tabs=4 -RFX
-#	autocrlf = true
-#	pager = cat
+    # pager = cat
     editor = vim	
 [help]
     autocorrect = 15

@@ -21,15 +21,6 @@ alias cdh='cd ~'
 
 alias medir=mkdircd
 
-# GitProxy aliases
-#alias gproxy='sudo ssh -f -nNT gitproxy'
-#alias gproxy-status='sudo ssh -O check gitproxy'
-#alias gproxy-off='sudo ssh -O exit gitproxy'
-alias gp-start='gitproxy start'
-alias gp-stop='gitproxy stop'
-alias gp-status='gitproxy status'
-
 alias weather='curl -s nb.wttr.in/Oslo\?F'
 
 alias whereis='where'
-
