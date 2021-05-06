@@ -124,8 +124,7 @@ if [[ $(hostname -s) == raspberrypi ]]; then
     ~/.raspberrypi-motd.sh
 fi
 
-if [[ $(whereis brew) == 0 ]]; then
-    echo "hi"
+if command -v brew &> /dev/null; then
     # BREW AUTOCOMPLETE
     if type brew &>/dev/null; then
       FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -134,7 +133,7 @@ if [[ $(whereis brew) == 0 ]]; then
     # Brew security options
     export HOMEBREW_NO_ANALYTICS=1
     export HOMEBREW_NO_INSECURE_REDIRECT=1
-    export HOMEBREW_CASK_OPTS=--require-sha
+#    export HOMEBREW_CASK_OPTS=--require-sha
 fi
 
 weather-prompt
