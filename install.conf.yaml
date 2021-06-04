@@ -22,11 +22,11 @@
         path: vscode/settings.json
     ~/.zshrc:
         path: dotfiles/zshrc
-    ~/.zsh/:
+    ~/.zsh/custom/:
         create: true
         glob: true
-        path: zsh/*
+        path: zsh/custom/*
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  
+
