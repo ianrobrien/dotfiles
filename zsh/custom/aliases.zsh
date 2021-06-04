@@ -1,4 +1,8 @@
-alias ls='gls --color'
+if [[ $(uname) == Darwin ]]; then
+    alias ls='gls --color'
+else
+    alias ls='ls --color'
+fi
 #alias la='ls -lAXgG'
 #alias l='ls -lFh'                                     #size,show type,human readable
 alias la='ls -lAFh --group-directories-first' #long list,show almost all,show type,human readable

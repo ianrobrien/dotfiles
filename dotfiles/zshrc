@@ -117,6 +117,11 @@ export LANG=en_US.UTF-8
 #export GPG_TTY=$(tty)
 #gpgconf --launch gpg-agent
 
+# Path for diff-so-fancy
+if [[ -d "$HOME/Development/diff-so-fancy" ]]; then
+  export PATH="$HOME/Development/diff-so-fancy:$PATH"
+fi
+
 # don't throw errors when file globs don't match anything
 setopt NULL_GLOB
 
